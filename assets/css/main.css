@@ -1068,6 +1068,13 @@ pre code {
   padding: 0;
 }
 
+.post-card-time{
+  position: absolute;
+  right: 5%;
+  color: white;
+  bottom: 13.333%;
+}
+
 .post-card-box li {
   position: relative;
   list-style: none;
@@ -1267,7 +1274,6 @@ pre code {
 .recent-box {
   margin-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .recent-box .recent-title {
@@ -1282,7 +1288,7 @@ pre code {
   position: relative;
   display: inline-block;
   width: 24%;
-  height: 150px;
+  height: 120px;
   margin-left: 0.5%;
   margin-bottom: 0.5%;
   -webkit-transition: all .3s;
@@ -1409,8 +1415,8 @@ pre code {
 }
 
 .author-box .author-img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin-right: 30px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
@@ -1758,4 +1764,40 @@ pre code {
   .author-box .author-desc p {
     margin: 0 0 15px;
   }
+}
+
+
+body::-webkit-scrollbar,.sidebar-panel-archives::-webkit-scrollbar,.sidebar-tags-list::-webkit-scrollbar,.sidebar-categories-list::-webkit-scrollbar,.highlight::-webkit-scrollbar {
+  background-color: rgba(0,0,0,0.5);
+  width: 5px
+}
+
+body::-webkit-scrollbar-corner,.sidebar-panel-archives::-webkit-scrollbar-corner,.sidebar-tags-list::-webkit-scrollbar-corner,.sidebar-categories-list::-webkit-scrollbar-corner,.highlight::-webkit-scrollbar-corner {
+  display: none
+}
+
+body::-webkit-scrollbar-button,.sidebar-panel-archives::-webkit-scrollbar-button,.sidebar-tags-list::-webkit-scrollbar-button,.sidebar-categories-list::-webkit-scrollbar-button,.highlight::-webkit-scrollbar-button {
+  display: none
+}
+
+body::-webkit-scrollbar-button:start:increment,html::-webkit-scrollbar-button:end:decrement,.sidebar-panel-archives::-webkit-scrollbar-button:start:increment,.sidebar-panel-archives::-webkit-scrollbar-button:end:decrement,.sidebar-tags-list::-webkit-scrollbar-button:start:increment,.sidebar-tags-list::-webkit-scrollbar-button:end:decrement,.sidebar-categories-list::-webkit-scrollbar-button:start:increment,.sidebar-categories-list::-webkit-scrollbar-button:end:decrement,.highlight::-webkit-scrollbar-button:start:increment,.highlight::-webkit-scrollbar-button:end:decrement {
+  display: none
+}
+
+body::-webkit-scrollbar-thumb,.sidebar-panel-archives::-webkit-scrollbar-thumb,.sidebar-tags-list::-webkit-scrollbar-thumb,.sidebar-categories-list::-webkit-scrollbar-thumb,.highlight::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2)
+}
+
+body::-webkit-scrollbar-track,html::-webkit-scrollbar-thumb,.sidebar-panel-archives::-webkit-scrollbar-track,.sidebar-panel-archives::-webkit-scrollbar-thumb,.sidebar-tags-list::-webkit-scrollbar-track,.sidebar-tags-list::-webkit-scrollbar-thumb,.sidebar-categories-list::-webkit-scrollbar-track,.sidebar-categories-list::-webkit-scrollbar-thumb,.highlight::-webkit-scrollbar-track,.highlight::-webkit-scrollbar-thumb {
+  border: none
+}
+
+body::-webkit-scrollbar-thumb,.sidebar-panel-archives::-webkit-scrollbar-thumb,.sidebar-tags-list::-webkit-scrollbar-thumb,.sidebar-categories-list::-webkit-scrollbar-thumb,.highlight::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px
+}
+
+body::-webkit-scrollbar-track:hover,.sidebar-panel-archives::-webkit-scrollbar-track:hover,.sidebar-tags-list::-webkit-scrollbar-track:hover,.sidebar-categories-list::-webkit-scrollbar-track:hover,.highlight::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,0.1)
 }

@@ -9,44 +9,44 @@ permalink: /about/
       <div class="author-image-container">
         <img src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{site.author}}">
       </div>
-      <p class="subtitle">{{site.about-author}}</p>
+      <p class="subtitle">
+        我并不仅仅在寻求“结果”...如果只为了寻求“结果”的话，人是容易走捷径的...
+        在走捷径时，也许就会迷失真实，甚至连满腔的热忱也会逐渐丧失。
+        我认为重要的是“寻求真实的意志”！只要有了这种向真实前进的意志，
+        即使这次失败了，我也终于会达到目标的，
+        因为我仍在继续前进...这是不会错的。
+      </p>
     </section>
     <section class="about-body">
       <ul class="contact-list">
       {% if site.email %}
         <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
       {% else %}
-        <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        <li class="email"><a href="mailto:815347984her@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
       {% endif %}
 
       {% if site.phone %}
         <li class="phone"><a href="tel:{{site.phone}}"><i class="fa fa-phone"></i></a></li>
       {% else %}
-        <li class="phone"><a href="tel:044 825 5523"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+        <li class="phone"><a href="tel:86-15728045618"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
       {% endif %}
 
-      {% if site.website %}
-        <li class="website"><a href="http://{{site.website}}" target="_blank"><i class="fa fa-globe"></i></a></li>
+      {% if site.weibo %}
+        <li class="linkedin"><a href="https://weibo.com/{{site.weibo}}" target="_blank"><i class="fa fa-weibo"></i></a></li>
       {% else %}
-        <li class="website"><a href="https://artemsheludko.github.io" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.linkedin %}
-        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-      {% else %}
-        <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li class="linkedin"><a href="https://weibo.com/" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
       {% endif %}
 
       {% if site.github %}
         <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
       {% else %}
-        <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li class="github"><a href="http://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
       {% endif %}
 
       {% if site.twitter %}
         <li class="twitter"><a href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
       {% else %}
-        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li class="twitter"><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       {% endif %}
 
       {% if site.facebook %}
@@ -55,17 +55,6 @@ permalink: /about/
         <li class="facebook"><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
       {% endif %}
 
-      {% if site.instagram %}
-        <li class="instagram"><a href="https://instagram.com/{{site.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      {% else %}
-        <li class="instagram"><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.pinterest %}
-        <li class="pinterest"><a href="https://pinterest.com/{{site.pinterest}}" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-      {% else %}
-        <li class="pinterest"><a href="https://pinterest.com/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-      {% endif %}
       </ul>
     </section> <!-- End About Body-->
   </div> <!-- End About Container -->
