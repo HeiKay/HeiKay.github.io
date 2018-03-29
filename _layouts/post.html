@@ -11,7 +11,9 @@ layout: default
       <div class="page-content">
         <div class="header-page">
           <h1 class="page-title">{{page.title}}</h1>
-          <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time></div>
+          <div class="page-date">
+            <time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time>
+        </div>
         </div>
         {{page.content | markdownify}}
         <div class="page-footer">
@@ -20,12 +22,29 @@ layout: default
             {% for tag in page.tags %}
             <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">| {{ tag }}</a>
             {% endfor %}
-          </div><!-- End Tags -->
+        </div>
+          <!-- End Tags -->
         </div>
         {% include author-box.html %}
         {% include recent-post.html %}
+        <!-- <div class="issues-box">
+          <h3 class="issues-title">问题讨论 / Issues</h3>
+          <ul class"issues-wrap">
+            <li>
+              <div class="user">
+                <img class="img" src="../assets/img/adam-face.jpg" alt="">
+                <div class="name">何凯妮</div>
+              </div>
+              <div class="content">
+                <p>adfjavkdsjka,daksda</p>
+                <time>20018</time>
+              </div>
+            </li>
+          </ul>
+        </div> -->
       </div>
-    </div> <!-- End Wrapper -->
+      </div>
+    <!-- End Wrapper -->
   </article>
   {% include search.html %}
   {% include footer.html %}

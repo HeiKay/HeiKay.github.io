@@ -14,6 +14,6 @@ Hello World
 
 ↑ 看到了这条，说明我正式在博客更新啦！ 👏
 
-希望这里能成为记录自己成长的某地  😀
+希望这里能成为记录自己成长的某地 😀
 
 ![Yosh Ginsu]({{site.baseurl}}/assets/img/blog/en.png)
