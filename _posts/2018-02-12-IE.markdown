@@ -8,7 +8,7 @@ tags: [Blog, brower, web]
 author: 何凯妮
 ---
 
-## 前言
+## 前言：
 
 转战博客，发现翻写东西还挺麻烦的，不满足于原先得出的结论，所以做了一些拓展与深究。
 
@@ -16,7 +16,7 @@ author: 何凯妮
 
 ---
 
-## 描述
+## 描述：
 
 重要问题有三
 
@@ -26,20 +26,65 @@ author: 何凯妮
 
 ---
 
-## 解决与思路
+## 解决与思路：
 
-### 1. 锚点跳转，样式混乱
+### 1. 锚点跳转，nav 样式混乱
 
 表现如下：
 
 <iframe title="纯色图片赋色技术尝试" src="https://codepen.io/HeiKay/embed/yKVELd/?height=265&amp;default-tab=js,result&amp;embed-version=2" frameborder="no" scrolling="no" width="100%" height="265"></iframe>
 
-点击 menu 各选项，可以看到样式并没有对应，且前一项满足样式。
+首先点击 menu 各选项，可以看到样式并没有对应，且**前一项**满足样式，虽然锚点目标停留到了可视部分的顶部，但是有一些细微差使得滚动事件绑定的样式出错。
 
-但是滚动时，样式随着滚动条高度变化是没有问题的。
+其次只看滚动事件时，样式随着滚动条高度变化是没有问题的。
 
-通过 console 查看各个锚点的高度，然后输出点击跳转后的高度如下：
-[!image]('/assets/img/blog/ie-1.png')
+这边通过 console 查看各个锚点的高度数据数组，然后在滚动事件里输出当前跳转高度，对比如下：
+
+>  ![anchor-console](/assets/img/blog/ie-1.png)
+
+可以看到，下面两个点击跳转的高度，明显都存在比 dom 中获得的高度**低**的情况。
+
+页面内其实单纯锚点跳转的话，这种细微差别并不明显，功能也能实现。
+
+而这里麻烦就在于，scroll 高度绑定了样式实际项目里 target 需要有一定的偏移（导航栏高度），
+
+所以就用到了**暗锚**这个手法，使替代锚点绝对定位于偏移量上方
+
+```css
+#anchor-target{
+  position: relative;
+}
+
+/* 暗锚位于本节点内 */
+#anchor-target #anchor-fakeTarget {
+  position: absolute;
+  display: block;
+  top: -80px; /* 偏移量 */
+  left: 0;
+}
+
+/* 位于同级前面节点内 */
+#anchor-target #anchor-fakeTarget {
+  position: absolute;
+  display: block;
+  height: 80px; /* 偏移量 */
+  bottom: 0;
+  left: 0;
+}
+```
+
+解决：
+* 非暗锚：微调锚点 target 高度数据数组，使得滚动事件里对这高度差判断可以略微兼容。
+* 暗锚：解决方式有很多，可以降低暗锚位置来消除偏差。
+
+效果如下：
+<iframe title="纯色图片赋色技术尝试" src="https://codepen.io/HeiKay/embed/MVQEYg/?height=265&amp;default-tab=js,result&amp;embed-version=2" frameborder="no" scrolling="no" width="100%" height="265"></iframe>
+
+### 2. 背景图未加载，格式为 PNG
+
+### 3. 三等分 在 edge 下只容下两个
+
+
 
 ---
 
