@@ -1,7 +1,7 @@
----
-layout: home-page
-title: About
-permalink: /about/
+--- 
+layout: home-page 
+title: About 
+permalink: /about/ 
 ---
 <div class="small-wrapper">
   <div class="about-container">
@@ -11,39 +11,69 @@ permalink: /about/
       </div>
       <p class="subtitle">
         我并不仅仅在寻求“结果”...如果只为了寻求“结果”的话，人是容易走捷径的...
-        在走捷径时，也许就会迷失真实，甚至连满腔的热忱也会逐渐丧失。
-        我认为重要的是“寻求真实的意志”！只要有了这种向真实前进的意志，
-        即使这次失败了，我也终于会达到目标的，
-        因为我仍在继续前进...这是不会错的。
+        <br/> 在走捷径时，也许就会迷失真实，甚至连满腔的热忱也会逐渐丧失。
+        <br/> 我认为重要的是“寻求真实的意志”！只要有了这种向真实前进的意志，
+        <br/> 即使这次失败了，我也终于会达到目标的，
+        <br/> 因为我仍在继续前进...这是不会错的。
+        <br/>
       </p>
     </section>
     <section class="about-body">
       <ul class="contact-list">
-      {% if site.email %}
-        <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
-      {% else %}
-        <li class="email"><a href="mailto:815347984her@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.phone %}
-        <li class="phone"><a href="tel:{{site.phone}}"><i class="fa fa-phone"></i></a></li>
-      {% else %}
-        <li class="phone"><a href="tel:86-15728045618"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.github %}
-        <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
-      {% else %}
-        <li class="github"><a href="http://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.twitter %}
-        <li class="twitter"><a href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      {% else %}
-        <li class="twitter"><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      {% endif %}
+        {% if site.email %}
+        <li class="email">
+          <a href="mailto:{{site.email}}">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+        </li>
+        {% else %}
+        <li class="email">
+          <a href="mailto:815347984her@gmail.com">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endif %} {% if site.phone %}
+        <li class="phone">
+          <a href="tel:{{site.phone}}">
+            <i class="fa fa-phone"></i>
+          </a>
+        </li>
+        {% else %}
+        <li class="phone">
+          <a href="tel:86-15728045618">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endif %} {% if site.github %}
+        <li class="github">
+          <a href="http://github.com/{{site.github}}" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        {% else %}
+        <li class="github">
+          <a href="http://github.com" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endif %} {% if site.twitter %}
+        <li class="twitter">
+          <a href="https://twitter.com/{{site.twitter}}" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        {% else %}
+        <li class="twitter">
+          <a href="https://twitter.com" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endif %}
 
       </ul>
-    </section> <!-- End About Body-->
-  </div> <!-- End About Container -->
-</div> <!-- End Small Wrapper -->
+    </section>
+    <!-- End About Body-->
+  </div>
+  <!-- End About Container -->
+</div>
+<!-- End Small Wrapper -->

@@ -4,7 +4,7 @@ title:  pc页面开发笔记
 date:   2018-02-12 00:45:00 +0800
 description: 何凯妮 HeiKay
 img: post-2.jpg
-tags: [Blog, brower, web]
+tags: [Blog, anchor, web]
 author: 何凯妮
 ---
 
@@ -30,7 +30,9 @@ author: 何凯妮
 
 ### 1. 锚点跳转，nav 样式混乱
 
-表现如下：
+##### 表现：
+
+这边用在线代码演示 bug
 
 <iframe title="纯色图片赋色技术尝试" src="https://codepen.io/HeiKay/embed/yKVELd/?height=265&amp;default-tab=js,result&amp;embed-version=2" frameborder="no" scrolling="no" width="100%" height="265"></iframe>
 
@@ -40,18 +42,18 @@ author: 何凯妮
 
 这边通过 console 查看各个锚点的高度数据数组，然后在滚动事件里输出当前跳转高度，对比如下：
 
->  ![anchor-console](/assets/img/blog/ie-1.png)
+> ![anchor-console](/assets/img/blog/ie-1.png)
 
 可以看到，下面两个点击跳转的高度，明显都存在比 dom 中获得的高度**低**的情况。
 
 页面内其实单纯锚点跳转的话，这种细微差别并不明显，功能也能实现。
 
-而这里麻烦就在于，scroll 高度绑定了样式实际项目里 target 需要有一定的偏移（导航栏高度），
+而这里麻烦就在于，scroll 高度绑定了样式.
 
-所以就用到了**暗锚**这个手法，使替代锚点绝对定位于偏移量上方
+实际项目里 target 需要有一定的偏移（导航栏高度），所以就用到了**暗锚**这个手法，使替代锚点绝对定位于偏移量上方。
 
 ```css
-#anchor-target{
+#anchor-target {
   position: relative;
 }
 
@@ -73,19 +75,87 @@ author: 何凯妮
 }
 ```
 
-解决：
+##### 解决：
+
 * 非暗锚：微调锚点 target 高度数据数组，使得滚动事件里对这高度差判断可以略微兼容。
 * 暗锚：解决方式有很多，可以降低暗锚位置来消除偏差。
 
-效果如下：
+##### 效果如下：
+
 <iframe title="纯色图片赋色技术尝试" src="https://codepen.io/HeiKay/embed/MVQEYg/?height=265&amp;default-tab=js,result&amp;embed-version=2" frameborder="no" scrolling="no" width="100%" height="265"></iframe>
 
 ### 2. 背景图未加载，格式为 PNG
 
+##### 表现：
+
+在 edge 里还有个表现是，除了一张 PNG 格式的背景图，其他图片均能正常显示，查看 console ，发现有如下提示：
+
+> ![png-background](/assets/img/blog/ie-2.png)
+
+其中对 MINE 拓展下：
+
+> * MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的因特网标准。
+> * MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+
+可知，是 edge 对这张背景图无法解析，搜索之后发现有可能是 png 格式是被强制改名的，所以无法显示。
+
+##### 解决：
+
+* 用 Photoshop 正常转为 png 后，显示正常。
+
+##### 拓展：
+
+[IE6 下 png 背景不透明问题的综合拓展](http://www.zhangxinxu.com/wordpress/2009/08/ie6%E4%B8%8Bpng%E8%83%8C%E6%99%AF%E4%B8%8D%E9%80%8F%E6%98%8E%E9%97%AE%E9%A2%98%E7%9A%84%E7%BB%BC%E5%90%88%E6%8B%93%E5%B1%95/)
+
 ### 3. 三等分 在 edge 下只容下两个
 
+#### 表现：
 
+> <img src="/assets/img/blog/ie-3.png" width="80%" alt="bug3"/>
+
+可以看到，item3 被挤到了下一层，查看关联 css 表以及比较盒模型。
+
+```css
+/* 主要用到这几个属性 */
+item {
+  float: left;
+  width: 23%;
+  height: 200px;
+  margin: 40px calc(31% / 6) 60px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+```
+
+> ![box-sizing compare](/assets/img/blog/ie-3.jpg)
+
+最内层 content 数据中，由于宽是计算值，高是固定值。
+
+对比高度值我们知道因为 ie 的盒模型，是有把 **border** 计算入 宽 高 值，所以计算出来的宽值有误差。
+
+> 盒子模型是 css 中一个重要的概念，盒子模型有两种，分别是 ie 盒子模型和标准 w3c 盒子模型
+> <img src="/assets/img/blog/w3c-box.jpg" width="50%" alt="w3c-box"/><img src="/assets/img/blog/ie-box.png" width="50%" alt="ie-box"/>
+
+但是在 **box-sizing : border-box** 属性下其实两个盒模型计算方式是一样的！
+
+所以先前就有统一盒子模型的意识，但是为什么还是会出现这种情况呢?
+
+这边再作一组对比，在 edge 或 ie 中打开下面 demo，可以看到这组对比意义
+
+<iframe title="纯色图片赋色技术尝试" src="https://codepen.io/HeiKay/embed/rddLXr/?height=265&amp;default-tab=result&amp;embed-version=2" frameborder="no" scrolling="no" width="100%" height="265"></iframe>
+
+在 edge 打开 codepen edit 里拉伸结果页，可以看到，其实会不同组都有不同的表现。
+
+很明显原因是 edge 浏览器对 % 的四舍五入和 chrome 不同
+
+##### 解决：
+
+* 这边可以加针对 ie 的 hock，但是 edge 这一代的 hock 方式还不知道，所以以 calc(31% / 6) 修改为 calc(30% / 6) 的方式，保留 1% 兼容
 
 ---
 
 ## 小结
+
+零零散散写完了这篇，没什么技术含量，语言组织能力也需要锻炼，更多记录下解决问题的过程。
+
+三个 demo 在移动版本较低的浏览器中可能不能很好展现，请净量在 pc 端复现。
