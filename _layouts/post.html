@@ -1,11 +1,9 @@
----
-layout: default
----
+--- layout: default ---
 <div class="flex-container">
   {% include header.html %}
   <article class="article-page">
     <div class="page-image">
-      <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}}) center no-repeat; background-size: cover;"></div>
+      <div class="cover-image" style="background: url({{page.img}}) center no-repeat; background-size: cover;"></div>
     </div>
     <div class="wrapper">
       <div class="page-content">
@@ -13,7 +11,7 @@ layout: default
           <h1 class="page-title">{{page.title}}</h1>
           <div class="page-date">
             <time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time>
-        </div>
+          </div>
         </div>
         {{page.content | markdownify}}
         <div class="page-footer">
@@ -22,30 +20,13 @@ layout: default
             {% for tag in page.tags %}
             <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">| {{ tag }}</a>
             {% endfor %}
-        </div>
+          </div>
           <!-- End Tags -->
         </div>
-        {% include author-box.html %}
-        {% include recent-post.html %}
-        <!-- <div class="issues-box">
-          <h3 class="issues-title">问题讨论 / Issues</h3>
-          <ul class"issues-wrap">
-            <li>
-              <div class="user">
-                <img class="img" src="../assets/img/adam-face.jpg" alt="">
-                <div class="name">何凯妮</div>
-              </div>
-              <div class="content">
-                <p>adfjavkdsjka,daksda</p>
-                <time>20018</time>
-              </div>
-            </li>
-          </ul>
-        </div> -->
+        {% include author-box.html %} {% include recent-post.html %}
       </div>
-      </div>
+    </div>
     <!-- End Wrapper -->
   </article>
-  {% include search.html %}
-  {% include footer.html %}
+  {% include search.html %} {% include footer.html %}
 </div>
