@@ -4,7 +4,7 @@ title: pc页面开发笔记
 date: 2018-02-12 00:45:00 +0800
 description: 何凯妮 HeiKay
 img: http://pdss99cje.bkt.clouddn.com/post-2.jpg
-tags: [Blog, anchor, web]
+tags: [BLOG, WEB]
 author: 何凯妮
 ---
 
@@ -158,4 +158,7 @@ item {
 
 零零散散写完了这篇，没什么技术含量，语言组织能力也需要锻炼，更多记录下解决问题的过程。
 
-三个 demo 在移动版本较低的浏览器中可能不能很好展现，请净量在 pc 端复现。
+三个 demo 在移动版本较低的浏览器中可能不能很好展现，请尽量在 pc 端复现。
+
+
+以上，均属于自身对问题的见解，因能力有限，仅供参考
