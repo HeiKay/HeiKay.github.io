@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 程序员之路
+title: JavaScript
 date: 2018-08-31 10:13:00 +0800
 description: 何凯妮 HeiKay
-img: http://pdss99cje.bkt.clouddn.com/post-3.jpeg
+img: http://wx1.sinaimg.cn/large/6dc324acly1fyb40xyrffj21h50u0b2a.jpg
 tags: [BLOG, 杂]
 author: 何凯妮
 ---

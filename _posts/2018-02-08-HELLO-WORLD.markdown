@@ -3,7 +3,7 @@ layout: post
 title: HELLO WORLD
 date: 2018-02-08 12:06:59 +0800
 description: 何凯妮 HeiKay Hello World
-img: http://pdss99cje.bkt.clouddn.com/post-1.jpg
+img: http://wx4.sinaimg.cn/large/6dc324acly1fy41140lp2j20xc0m843z.jpg
 tags: [BLOG, 杂]
 author: 何凯妮
 ---
@@ -16,4 +16,4 @@ Hello World
 
 希望这里能成为记录自己成长的某地 😀
 
-![Yosh Ginsu]({{site.baseurl}}http://pdss99cje.bkt.clouddn.com/post1/en.png)
+<img src="http://wx1.sinaimg.cn/large/6dc324acly1fyb3woiyvnj20hs0hsq3p.jpg" width="150px" alt="w3c-box"/>
