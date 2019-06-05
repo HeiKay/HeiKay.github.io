@@ -2,10 +2,10 @@
 layout: post
 title: 开发日记-浏览器之间的不同表现
 date: 2018-11-22 10:32:00 +0800
-description: 何凯妮 HeiKay
+description: HeiKay
 img: https://wx3.sinaimg.cn/large/6dc324acly1fyb464boxyj21900u04qp.jpg
 tags: [BLOG, WEB, BROWSER]
-author: 何凯妮
+author: HeiKay
 ---
 
 ## 前言：

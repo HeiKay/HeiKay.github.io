@@ -6,15 +6,13 @@ baseurl: ""
 url: "https://heikay.github.io/"
 
 # Author settings
-author: 何凯妮 / HeiKay
+author: HeiKay
 author-pic: adam-face.jpg
 about-author: 下手糞の上級者への道のりは己が下手さを知りて一歩目
 
 # Contact links
 email: 815347984@qq.com
-phone: 86-15728045618
 github: HeiKay
-twitter: '@KayNicole_He'
 
 # Tracker
 analytics: # Google Analytics
