@@ -3,7 +3,7 @@ layout: post
 title: 面试题记录
 date: Thu Dec 20 2018 01:24:52 GMT+0800
 description: 面试题部分记录
-img: https://wx2.sinaimg.cn/large/6dc324acly1fyd3yke9jej21tu0u0b29.jpg
+img: http://wx2.sinaimg.cn/large/6dc324acly1fyd3yke9jej21tu0u0b29.jpg
 tags: [BLOG, 记录]
 author: 何凯妮
 ---

@@ -3,7 +3,7 @@ layout: post
 title: pc页面开发笔记
 date: 2018-02-12 00:45:00 +0800
 description: 何凯妮 HeiKay
-img: https://wx2.sinaimg.cn/large/6dc324acly1fy410zf8cej21h50u041r.jpg
+img: http://wx2.sinaimg.cn/large/6dc324acly1fy410zf8cej21h50u041r.jpg
 tags: [BLOG, WEB]
 author: 何凯妮
 ---
