@@ -1,9 +1,0 @@
----
-layout: post
-title: JavaScript
-date: 2018-08-31 10:13:00 +0800
-description: HeiKay
-img: https://wx1.sinaimg.cn/large/6dc324acly1fyb40xyrffj21h50u0b2a.jpg
-tags: [BLOG, 杂]
-author: HeiKay
----

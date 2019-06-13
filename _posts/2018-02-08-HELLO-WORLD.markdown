@@ -4,7 +4,7 @@ title: HELLO WORLD
 date: 2018-02-08 12:06:59 +0800
 description: HeiKay Hello World
 img: http://wx4.sinaimg.cn/large/6dc324acly1fy41140lp2j20xc0m843z.jpg
-tags: [BLOG, 杂]
+tags: []
 author: HeiKay
 ---
 

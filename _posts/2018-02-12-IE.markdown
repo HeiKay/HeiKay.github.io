@@ -4,7 +4,7 @@ title: pc页面开发笔记
 date: 2018-02-12 00:45:00 +0800
 description: HeiKay
 img: http://wx2.sinaimg.cn/large/6dc324acly1fy410zf8cej21h50u041r.jpg
-tags: [BLOG, WEB]
+tags: [Browser]
 author: HeiKay
 ---
 
